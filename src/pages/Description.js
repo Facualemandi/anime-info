@@ -168,7 +168,7 @@ const SectionSynopsys = styled.section`
   padding: 5px;
   margin-top: 15px;
   border-radius: 5px;
-  
+
   @media (min-width: 780px) {
     width: 780px;
   }
@@ -191,22 +191,35 @@ const SectionInfo = styled.section`
   font-size: 16px;
   background-color: #0a1c2c;
   border-radius: 10px;
+
+  @media (min-width: 780px) {
+    width: 780px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  @media (min-width: 1080px) {
+    width: 1080px;
+  }
+  @media (min-width: 1380px) {
+    width: 1380px;
+  }
 `;
 
 const SpanInfo = styled.span`
-   font-family: "Roboto", sans-serif;
-   font-size: 14px;
-   font-weight: lighter;
-   letter-spacing: 0.5px;
-   margin-left: 5px;
-`
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+`;
 
 const PInfo = styled.p`
- margin: 5px;
- padding: 5px;
- background-color: #172c3f;
- border-radius: 3px;
-`
+  margin: 5px;
+  padding: 5px;
+  background-color: #172c3f;
+  border-radius: 3px;
+`;
 
 const Description = () => {
   const getLocal = localStorage.getItem("Description");
@@ -275,21 +288,70 @@ const Description = () => {
         </ContainerOne>
 
         <SectionInfo>
-          <PInfo>Type: <SpanInfo>{`${type ? type : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Episodes: <SpanInfo>{`${episodes ? episodes : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Status: <SpanInfo>{`${status ? status : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Aired: <SpanInfo>{`${aired ? aired.string : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Premiered: <SpanInfo>{`${season && year ? season + " " + year : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Broadcast: <SpanInfo>{`${broadcast ? broadcast.string : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Producers: <SpanInfo>{`${producers.length === 0 ? "- - -" : producers[0].name}`}</SpanInfo></PInfo>
-          <PInfo>Licensors: <SpanInfo>{`${licensors.length === 0 ? "- - -" : licensors[0].name}`}</SpanInfo></PInfo>
-          <PInfo>Studios: <SpanInfo>{`${studios.length === 0 ? "- - -" : studios[0].name}`}</SpanInfo></PInfo>
-          <PInfo>Source: <SpanInfo>{`${source ? source : "- - -"}`}</SpanInfo></PInfo>
-          <PInfo>Genres: <SpanInfo>{spaceGenre}</SpanInfo></PInfo>
-          <PInfo>Themes: <SpanInfo>{`${theme.length === 0 ? "- - -" : spaceTheme}`}</SpanInfo></PInfo>
-          <PInfo>Demographic: <SpanInfo>{`${demograpic.length === 0 ? "- - -" : demograpic}`}</SpanInfo></PInfo>
-          <PInfo>Duration: <SpanInfo>{duration}</SpanInfo></PInfo>
-          <PInfo>Rating: <SpanInfo>{rating}</SpanInfo></PInfo>
+          <PInfo>
+            Type: <SpanInfo>{`${type ? type : "- - -"}`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Episodes: <SpanInfo>{`${episodes ? episodes : "- - -"}`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Status: <SpanInfo>{`${status ? status : "- - -"}`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Aired: <SpanInfo>{`${aired ? aired.string : "- - -"}`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Premiered:{" "}
+            <SpanInfo>{`${
+              season && year ? season + " " + year : "- - -"
+            }`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Broadcast:{" "}
+            <SpanInfo>{`${broadcast ? broadcast.string : "- - -"}`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Producers:{" "}
+            <SpanInfo>{`${
+              producers.length === 0 ? "- - -" : producers[0].name
+            }`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Licensors:{" "}
+            <SpanInfo>{`${
+              licensors.length === 0 ? "- - -" : licensors[0].name
+            }`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Studios:{" "}
+            <SpanInfo>{`${
+              studios.length === 0 ? "- - -" : studios[0].name
+            }`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Source: <SpanInfo>{`${source ? source : "- - -"}`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Genres: <SpanInfo>{spaceGenre}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Themes:{" "}
+            <SpanInfo>{`${
+              theme.length === 0 ? "- - -" : spaceTheme
+            }`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Demographic:{" "}
+            <SpanInfo>{`${
+              demograpic.length === 0 ? "- - -" : demograpic
+            }`}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Duration: <SpanInfo>{duration}</SpanInfo>
+          </PInfo>
+          <PInfo>
+            Rating: <SpanInfo>{rating}</SpanInfo>
+          </PInfo>
         </SectionInfo>
 
         <SectionSynopsys>
