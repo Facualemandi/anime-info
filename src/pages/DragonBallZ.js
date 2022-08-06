@@ -5,9 +5,26 @@ import Loader from "../components/Loader/Loader";
 import { NavLink } from "react-router-dom";
 
 const Main = styled.main`
+  width: 100vw;
+  background-color: #172c3f;
+`;
+const SectionOne = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: #172c3f;
+  margin: auto;
+
+  @media (min-width: 780px) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 780px;
+  }
+  @media (min-width: 1080px) {
+    grid-template-columns: repeat(4, 1fr);
+    width: 1080px;
+  }
+  @media (min-width: 1380px) {
+    grid-template-columns: repeat(5, 1fr);
+    width: 1380px;
+  }
 `;
 const Img = styled.img`
   width: 100%;
@@ -54,16 +71,18 @@ const DragonBallZ = () => {
   return (
     <>
       <Main>
-        {data.data.map((el) => (
-          <NavL
-            to={`/Description/${el.title}`}
-            key={el.mal_id}
-            onClick={() => localDescription(el)}
-          >
-            <Img alt={el.title} src={el.images.jpg.image_url} />
-            <Title>{el.title}</Title>
-          </NavL>
-        ))}
+        <SectionOne>
+          {data.data.map((el) => (
+            <NavL
+              to={`/Description/${el.title}`}
+              key={el.mal_id}
+              onClick={() => localDescription(el)}
+            >
+              <Img alt={el.title} src={el.images.jpg.image_url} />
+              <Title>{el.title}</Title>
+            </NavL>
+          ))}
+        </SectionOne>
       </Main>
     </>
   );
