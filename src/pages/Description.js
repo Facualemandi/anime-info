@@ -164,7 +164,11 @@ const SectionSynopsys = styled.section`
   display: flex;
   flex-direction: column;
   margin: auto;
-
+  background-color: #0a1c2c;
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 5px;
+  
   @media (min-width: 780px) {
     width: 780px;
   }
@@ -176,16 +180,69 @@ const SectionSynopsys = styled.section`
   }
 `;
 
+const SectionInfo = styled.section`
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: auto;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #0a1c2c;
+  border-radius: 10px;
+`;
+
+const SpanInfo = styled.span`
+   font-family: "Roboto", sans-serif;
+   font-size: 14px;
+   font-weight: lighter;
+   letter-spacing: 0.5px;
+   margin-left: 5px;
+`
+
+const PInfo = styled.p`
+ margin: 5px;
+ padding: 5px;
+ background-color: #172c3f;
+ border-radius: 3px;
+`
+
 const Description = () => {
   const getLocal = localStorage.getItem("Description");
   const parseLocal = JSON.parse(getLocal);
 
-  const { title, score, scored_by, rank, popularity, members, synopsis } =
-    parseLocal;
+  const {
+    title,
+    score,
+    scored_by,
+    rank,
+    popularity,
+    members,
+    synopsis,
+    type,
+    episodes,
+    status,
+    aired,
+    year,
+    season,
+    broadcast,
+    producers,
+    licensors,
+    studios,
+    source,
+    duration,
+    rating,
+  } = parseLocal;
 
   console.log(parseLocal);
 
   const img = parseLocal.images.webp.large_image_url;
+  const genres = parseLocal.genres.map((el) => el.name);
+  const spaceGenre = genres.join(", ");
+  const theme = parseLocal.themes.map((el) => el.name);
+  const spaceTheme = theme.join(" - ");
+  const demograpic = parseLocal.demographics.map((el) => el.name);
 
   return (
     <>
@@ -197,7 +254,7 @@ const Description = () => {
             <SectionDesktop>
               <DivOne>
                 <ScoreP>Score</ScoreP>
-                <Score>{score}</Score>
+                <Score>{`${score ? score : "- - -"}`}</Score>
                 <ScoreBy>
                   {scored_by} <SpanUser>users</SpanUser>
                 </ScoreBy>
@@ -216,6 +273,24 @@ const Description = () => {
             </SectionDesktop>
           </SectionOne>
         </ContainerOne>
+
+        <SectionInfo>
+          <PInfo>Type: <SpanInfo>{`${type ? type : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Episodes: <SpanInfo>{`${episodes ? episodes : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Status: <SpanInfo>{`${status ? status : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Aired: <SpanInfo>{`${aired ? aired.string : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Premiered: <SpanInfo>{`${season && year ? season + " " + year : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Broadcast: <SpanInfo>{`${broadcast ? broadcast.string : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Producers: <SpanInfo>{`${producers.length === 0 ? "- - -" : producers[0].name}`}</SpanInfo></PInfo>
+          <PInfo>Licensors: <SpanInfo>{`${licensors.length === 0 ? "- - -" : licensors[0].name}`}</SpanInfo></PInfo>
+          <PInfo>Studios: <SpanInfo>{`${studios.length === 0 ? "- - -" : studios[0].name}`}</SpanInfo></PInfo>
+          <PInfo>Source: <SpanInfo>{`${source ? source : "- - -"}`}</SpanInfo></PInfo>
+          <PInfo>Genres: <SpanInfo>{spaceGenre}</SpanInfo></PInfo>
+          <PInfo>Themes: <SpanInfo>{`${theme.length === 0 ? "- - -" : spaceTheme}`}</SpanInfo></PInfo>
+          <PInfo>Demographic: <SpanInfo>{`${demograpic.length === 0 ? "- - -" : demograpic}`}</SpanInfo></PInfo>
+          <PInfo>Duration: <SpanInfo>{duration}</SpanInfo></PInfo>
+          <PInfo>Rating: <SpanInfo>{rating}</SpanInfo></PInfo>
+        </SectionInfo>
 
         <SectionSynopsys>
           <h3>Synopsis</h3>
