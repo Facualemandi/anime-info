@@ -18,7 +18,12 @@ const Section = styled.section`
 
   @media (min-width: 780px) {
     width: 780px;
-    margin: 0;
+  }
+  @media (min-width: 1080px) {
+    width: 1080px;
+  }
+  @media (min-width: 1380px) {
+    width: 1380px;
   }
 `;
 
