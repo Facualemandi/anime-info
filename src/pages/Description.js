@@ -10,6 +10,14 @@ const Img = styled.img`
   display: flex;
   border-radius: 15px;
   max-width: 350px;
+
+  @media (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 10px;
+  }
 `;
 
 const Title = styled.p`
@@ -28,6 +36,11 @@ const Title = styled.p`
 const ContainerOne = styled.section`
   display: flex;
   padding: 10px;
+
+  @media (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media (min-width: 780px) {
     margin: auto;
@@ -115,7 +128,7 @@ const SpanDetails = styled.span`
 
 const ItemDetail = styled.p`
   padding: 5px;
-  margin-top: 30px;
+  margin-top: 12px;
   width: 100%;
   border-radius: 3px;
   background-color: #32475b;
@@ -140,11 +153,35 @@ const SectionDesktop = styled.section`
     margin-left: 10px;
   }
 `;
+
+const SectionSynopsys = styled.section`
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  color: white;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  @media (min-width: 780px) {
+    width: 780px;
+  }
+  @media (min-width: 1080px) {
+    width: 1080px;
+  }
+  @media (min-width: 1380px) {
+    width: 1380px;
+  }
+`;
+
 const Description = () => {
   const getLocal = localStorage.getItem("Description");
   const parseLocal = JSON.parse(getLocal);
 
-  const { title, score, scored_by, rank, popularity, members } = parseLocal;
+  const { title, score, scored_by, rank, popularity, members, synopsis } =
+    parseLocal;
 
   console.log(parseLocal);
 
@@ -179,6 +216,11 @@ const Description = () => {
             </SectionDesktop>
           </SectionOne>
         </ContainerOne>
+
+        <SectionSynopsys>
+          <h3>Synopsis</h3>
+          <p>{synopsis}</p>
+        </SectionSynopsys>
       </Main>
     </>
   );
