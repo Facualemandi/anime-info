@@ -11,6 +11,7 @@ import JujutsuKaisen from "./pages/JujutsuKaisen/JujutsuKaisen";
 import HeroAcademi from "./pages/HeroAcademi/HeroAcademi";
 import Shingeki from "./pages/Shingeki/Shingeki";
 import Fullmetal from "./pages/Fullmetal/Fullmetal";
+import { TheContext } from "./context/context";
 
 function App() {
   const queryClient = new QueryClient();
@@ -18,20 +19,22 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <ScrollTop>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Dbz" element={<DragonBallZ />} />
-            <Route path="/naruto" element={<Naruto />} />
-            <Route path="/onepunch" element={<OnePunch />} />
-            <Route path="/yugioh" element={<YuGiOh />} />
-            <Route path="/JujutsuKaisen" element={<JujutsuKaisen />} />
-            <Route path="/HeroAcademi" element={<HeroAcademi />} />
-            <Route path="/shingeki" element={<Shingeki />} />
-            <Route path="/fullmetal" element={<Fullmetal />} />
-            <Route path="/Description/:name" element={<Description />} />
-          </Routes>
-        </ScrollTop>
+        <TheContext>
+          <ScrollTop>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Dbz" element={<DragonBallZ />} />
+              <Route path="/naruto" element={<Naruto />} />
+              <Route path="/onepunch" element={<OnePunch />} />
+              <Route path="/yugioh" element={<YuGiOh />} />
+              <Route path="/JujutsuKaisen" element={<JujutsuKaisen />} />
+              <Route path="/HeroAcademi" element={<HeroAcademi />} />
+              <Route path="/shingeki" element={<Shingeki />} />
+              <Route path="/fullmetal" element={<Fullmetal />} />
+              <Route path="/Description/:name" element={<Description />} />
+            </Routes>
+          </ScrollTop>
+        </TheContext>
       </QueryClientProvider>
     </>
   );

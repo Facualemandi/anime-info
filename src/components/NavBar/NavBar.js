@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoSearch } from "react-icons/go";
 import styled from "styled-components";
+import { useTheContext } from "../../context/context";
 
 const Main = styled.main`
   width: 100vw;
@@ -35,6 +36,7 @@ const Input = styled.input`
   border-radius: 5px;
   outline: none;
   color: white;
+  padding: 5px;
 `;
 const IconSearch = styled(GoSearch)`
   width: 35px;
@@ -43,10 +45,19 @@ const IconSearch = styled(GoSearch)`
   color: grey;
 `;
 const NavBar = () => {
+
+  const { hanldeSearch, search } = useTheContext();
+
   return (
     <Main>
       <Section>
-        <Input type={"text"} />
+        <Input
+          type={"text"}
+          placeholder="Ingresa tu anime"
+          onChange={hanldeSearch}
+          name="anime"
+          value={search}
+        />
         <IconSearch />
       </Section>
     </Main>

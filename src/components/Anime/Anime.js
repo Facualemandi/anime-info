@@ -1,18 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import DragonBall from "../../images/Dbz.jpg";
-import Naruto from "../../images/naruto.jpg";
-import OnePunch from "../../images/onepunch.jpg";
-import Yugioh from "../../images/yigioh.jpg";
-import JujutsuKaisen from "../../images/JujutsuKaisen.jpg";
-import MyHero from "../../images/myHero.jpg";
-import Shingeki from "../../images/ShingekinoKyojin.jpg";
-import Fma from "../../images/Fmab.jpg";
 import { NavLink } from "react-router-dom";
+import { useTheContext } from "../../context/context";
 
 const Main = styled.main`
   width: 100vw;
-  height: auto;
+  height: max-content;
   background-color: #0a151f;
 `;
 
@@ -64,108 +57,22 @@ const NavL = styled(NavLink)`
   text-decoration: none;
 `;
 
-const totalAnime = [
-  {
-    id: 1,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 2,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 3,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 4,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 5,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 6,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 7,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-  {
-    id: 8,
-    title: "Dragon Ball Z",
-    img: `${DragonBall}`,
-  },
-];
-
 const Anime = () => {
+  const { newTotalAnime } = useTheContext();
+  console.log(newTotalAnime);
+
   return (
     <>
       <Main>
         <Container>
-          <NavL to={"/Dbz"}>
-            <SectionAnime>
-              <Img alt="Dragon Ball Z" src={DragonBall} />
-              <Name>Dragon Ball Z</Name>
-            </SectionAnime>
-          </NavL>
-
-          <NavL to={"/naruto"}>
-            <SectionAnime>
-              <Img alt="Naruto" src={Naruto} />
-              <Name>Naruto</Name>
-            </SectionAnime>
-          </NavL>
-
-          <NavL to={"/onepunch"}>
-            <SectionAnime>
-              <Img alt="One Punch " src={OnePunch} />
-              <Name>One Punch Man</Name>
-            </SectionAnime>
-          </NavL>
-
-          <NavL to={"/yugioh"}>
-            <SectionAnime>
-              <Img alt="Yu-Gi-Oh" src={Yugioh} />
-              <Name>Yu-Gi-Oh</Name>
-            </SectionAnime>
-          </NavL>
-
-          <NavL to={"/JujutsuKaisen"}>
-            <SectionAnime>
-              <Img alt="Dragon Ball Z" src={JujutsuKaisen} />
-              <Name>Jujutsu Kaisen</Name>
-            </SectionAnime>
-          </NavL>
-
-          <NavL to={"/HeroAcademi"}>
-            <SectionAnime>
-              <Img alt="Dragon Ball Z" src={MyHero} />
-              <Name>My Hero Academia</Name>
-            </SectionAnime>
-          </NavL>
-
-          <NavL to={"/shingeki"}>
-            <SectionAnime>
-              <Img alt="Shingeki No Kyojin" src={Shingeki} />
-              <Name>Shingeki No Kyojin</Name>
-            </SectionAnime>
-          </NavL>
-          <NavL to={"/fullmetal"}>
-            <SectionAnime>
-              <Img alt="Fullmetal Alchemist" src={Fma} />
-              <Name>Fullmetal Alchemist</Name>
-            </SectionAnime>
-          </NavL>
+          {newTotalAnime.map((el) => (
+            <NavL to={`/${el.abb}`} key={el.id}>
+              <SectionAnime>
+                <Img alt="" src={el.img} />
+                <Name>{el.title}</Name>
+              </SectionAnime>
+            </NavL>
+          ))}
         </Container>
       </Main>
     </>
