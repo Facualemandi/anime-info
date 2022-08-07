@@ -95,17 +95,19 @@ const Anime = () => {
             </SectionAnime>
           </NavL>
 
-          <NavL to={'/JujutsuKaisen'}>
+          <NavL to={"/JujutsuKaisen"}>
             <SectionAnime>
               <Img alt="Dragon Ball Z" src={JujutsuKaisen} />
               <Name>Jujutsu Kaisen</Name>
             </SectionAnime>
           </NavL>
 
-          <SectionAnime>
-            <Img alt="Dragon Ball Z" src={MyHero} />
-            <Name>My Hero Academia</Name>
-          </SectionAnime>
+          <NavL to={"/HeroAcademi"}>
+            <SectionAnime>
+              <Img alt="Dragon Ball Z" src={MyHero} />
+              <Name>My Hero Academia</Name>
+            </SectionAnime>
+          </NavL>
         </Container>
       </Main>
     </>
