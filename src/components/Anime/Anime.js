@@ -76,25 +76,31 @@ const Anime = () => {
 
           <NavL to={"/naruto"}>
             <SectionAnime>
-              <Img alt="Dragon Ball Z" src={Naruto} />
+              <Img alt="Naruto" src={Naruto} />
               <Name>Naruto</Name>
             </SectionAnime>
           </NavL>
 
-          <NavL  to={'/onepunch'}>
-            <Img alt="Dragon Ball Z" src={OnePunch} />
-            <Name>One Punch Man</Name>
+          <NavL to={"/onepunch"}>
+            <SectionAnime>
+              <Img alt="One Punch " src={OnePunch} />
+              <Name>One Punch Man</Name>
+            </SectionAnime>
           </NavL>
 
-          <SectionAnime>
-            <Img alt="Dragon Ball Z" src={Yugioh} />
-            <Name>Yu-Gi-Oh</Name>
-          </SectionAnime>
+          <NavL to={"/yugioh"}>
+            <SectionAnime>
+              <Img alt="Yu-Gi-Oh" src={Yugioh} />
+              <Name>Yu-Gi-Oh</Name>
+            </SectionAnime>
+          </NavL>
 
-          <SectionAnime>
-            <Img alt="Dragon Ball Z" src={JujutsuKaisen} />
-            <Name>Jujutsu Kaisen</Name>
-          </SectionAnime>
+          <NavL to={'/JujutsuKaisen'}>
+            <SectionAnime>
+              <Img alt="Dragon Ball Z" src={JujutsuKaisen} />
+              <Name>Jujutsu Kaisen</Name>
+            </SectionAnime>
+          </NavL>
 
           <SectionAnime>
             <Img alt="Dragon Ball Z" src={MyHero} />

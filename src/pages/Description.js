@@ -248,7 +248,6 @@ const Description = () => {
     rating,
   } = parseLocal;
 
-  console.log(parseLocal);
 
   const img = parseLocal.images.webp.large_image_url;
   const genres = parseLocal.genres.map((el) => el.name);

@@ -1,8 +1,8 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import Loader from "../../components/Loader/Loader";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 const Main = styled.main`
   width: 100vw;
@@ -45,16 +45,19 @@ const Title = styled.p`
   color: white;
   padding: 5px;
 `;
-
-const Naruto = () => {
-  const getNaruto = async () => {
-    const response = await fetch("https://api.jikan.moe/v4/anime?q=Naruto&sfw");
+const JujutsuKaisen = () => {
+  const getKaisen = async () => {
+    const response = await fetch(
+      "https://api.jikan.moe/v4/anime?q=Jujutsu%20Kaisen&sfw"
+    );
     return response.json();
   };
 
-  const { data, status } = useQuery(["naruto"], getNaruto);
+  const { data, status } = useQuery(["kaisen"], getKaisen);
 
-
+  const localDescription = (el) => {
+    localStorage.setItem("Description", JSON.stringify(el));
+  };
 
   if (status === "loading") {
     return <Loader />;
@@ -63,10 +66,6 @@ const Naruto = () => {
   if (status === "error") {
     return <p>Error</p>;
   }
-
-  const localDescription = (el) => {
-    localStorage.setItem("Description", JSON.stringify(el));
-  };
 
   return (
     <>
@@ -88,4 +87,4 @@ const Naruto = () => {
   );
 };
 
-export default Naruto;
+export default JujutsuKaisen;

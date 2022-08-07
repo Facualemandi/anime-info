@@ -46,15 +46,15 @@ const Title = styled.p`
   padding: 5px;
 `;
 
-const Naruto = () => {
-  const getNaruto = async () => {
-    const response = await fetch("https://api.jikan.moe/v4/anime?q=Naruto&sfw");
+const YuGiOh = () => {
+  const getYugioh = async () => {
+    const response = await fetch(
+      "https://api.jikan.moe/v4/anime?q=yu%20gi%20oh&sfw"
+    );
     return response.json();
   };
 
-  const { data, status } = useQuery(["naruto"], getNaruto);
-
-
+  const { data, status } = useQuery(["yugioh"], getYugioh);
 
   if (status === "loading") {
     return <Loader />;
@@ -67,6 +67,7 @@ const Naruto = () => {
   const localDescription = (el) => {
     localStorage.setItem("Description", JSON.stringify(el));
   };
+
 
   return (
     <>
@@ -88,4 +89,4 @@ const Naruto = () => {
   );
 };
 
-export default Naruto;
+export default YuGiOh;
