@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/anime-info/static/css/main.31a8b687.css",
-    "main.js": "/anime-info/static/js/main.d05f7229.js",
+    "main.js": "/anime-info/static/js/main.f332fcf2.js",
     "static/media/JujutsuKaisen.jpg": "/anime-info/static/media/JujutsuKaisen.2085f4e78f8b097c6ff7.jpg",
     "static/media/Dbz.jpg": "/anime-info/static/media/Dbz.f95528c62456b55e7d00.jpg",
     "static/media/onepunch.jpg": "/anime-info/static/media/onepunch.9c954737f5d4dbf8173f.jpg",
@@ -10,10 +10,10 @@
     "static/media/yigioh.jpg": "/anime-info/static/media/yigioh.21ff9067e9ae09b67528.jpg",
     "index.html": "/anime-info/index.html",
     "main.31a8b687.css.map": "/anime-info/static/css/main.31a8b687.css.map",
-    "main.d05f7229.js.map": "/anime-info/static/js/main.d05f7229.js.map"
+    "main.f332fcf2.js.map": "/anime-info/static/js/main.f332fcf2.js.map"
   },
   "entrypoints": [
     "static/css/main.31a8b687.css",
-    "static/js/main.d05f7229.js"
+    "static/js/main.f332fcf2.js"
   ]
 }
