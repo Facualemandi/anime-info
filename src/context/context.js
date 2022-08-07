@@ -6,7 +6,12 @@ import Yugioh from "../images/yigioh.jpg";
 import JujutsuKaisen from "../images/JujutsuKaisen.jpg";
 import MyHero from "../images/myHero.jpg";
 import Shingeki from "../images/ShingekinoKyojin.jpg";
+import BlackCover from "../images/blackCover.jpg";
+import Hunter from "../images/hunterxhunter.jpg";
+import Gintama from "../images/Gintama.jpg";
+import Kimetsu from "../images/Kimetsu.jpg";
 import Fma from "../images/Fmab.jpg";
+import Haikyuu from "../images/Haikyuu.jpg";
 
 const animeContext = createContext();
 
@@ -67,33 +72,33 @@ export function TheContext({ children }) {
     },
     {
       id: 9,
-      title: "Fullmetal Alchemist",
-      abb: "fullmetal",
-      img: `${Fma}`,
+      title: "Black Cover",
+      abb: "blkCover",
+      img: `${BlackCover}`,
     },
     {
       id: 10,
-      title: "Fullmetal Alchemist",
-      abb: "fullmetal",
-      img: `${Fma}`,
+      title: "Hunter x Hunter",
+      abb: "hunter",
+      img: `${Hunter}`,
     },
     {
       id: 11,
-      title: "Fullmetal Alchemist",
-      abb: "fullmetal",
-      img: `${Fma}`,
+      title: "Gintama",
+      abb: "gtm",
+      img: `${Gintama}`,
     },
     {
       id: 12,
-      title: "Fullmetal Alchemist",
-      abb: "fullmetal",
-      img: `${Fma}`,
+      title: "Kimetsu no Yaiba",
+      abb: "kimetsu",
+      img: `${Kimetsu}`,
     },
     {
       id: 13,
-      title: "Fullmetal Alchemist",
-      abb: "fullmetal",
-      img: `${Fma}`,
+      title: "Haikyuu",
+      abb: "haikyuu",
+      img: `${Haikyuu}`,
     },
   ];
 

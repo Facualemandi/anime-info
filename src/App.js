@@ -12,6 +12,11 @@ import HeroAcademi from "./pages/HeroAcademi/HeroAcademi";
 import Shingeki from "./pages/Shingeki/Shingeki";
 import Fullmetal from "./pages/Fullmetal/Fullmetal";
 import { TheContext } from "./context/context";
+import BlackCover from "./pages/BlackCover/BlackCover";
+import Hunter from "./pages/Hunter/Hunter";
+import Gitama from "./pages/Gintama/Gintama";
+import Kimetsu from "./pages/Kimetsu/Kimetsu";
+import Haikyuu from "./pages/Haikyuu/Haikyuu";
 
 function App() {
   const queryClient = new QueryClient();
@@ -31,6 +36,11 @@ function App() {
               <Route path="/HeroAcademi" element={<HeroAcademi />} />
               <Route path="/shingeki" element={<Shingeki />} />
               <Route path="/fullmetal" element={<Fullmetal />} />
+              <Route path="/blkCover" element={<BlackCover />} />
+              <Route path="/hunter" element={<Hunter />} />
+              <Route path="/gtm" element={<Gitama />} />
+              <Route path="/kimetsu" element={<Kimetsu />} />
+              <Route path="/haikyuu" element={<Haikyuu/>} />
               <Route path="/Description/:name" element={<Description />} />
             </Routes>
           </ScrollTop>

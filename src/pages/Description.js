@@ -109,6 +109,7 @@ const SpanUser = styled.span`
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: lighter;
+  background-color: #172c3f;
 `;
 
 const SectionTwo = styled.section`
