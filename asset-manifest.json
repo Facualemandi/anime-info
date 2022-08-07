@@ -1,21 +1,26 @@
 {
   "files": {
     "main.css": "/anime-info/static/css/main.637706a0.css",
-    "main.js": "/anime-info/static/js/main.c2401cec.js",
+    "main.js": "/anime-info/static/js/main.4c48555f.js",
     "static/media/JujutsuKaisen.jpg": "/anime-info/static/media/JujutsuKaisen.2085f4e78f8b097c6ff7.jpg",
+    "static/media/Kimetsu.jpg": "/anime-info/static/media/Kimetsu.1eb2c0bb60070c6274e1.jpg",
     "static/media/Dbz.jpg": "/anime-info/static/media/Dbz.f95528c62456b55e7d00.jpg",
+    "static/media/Haikyuu.jpg": "/anime-info/static/media/Haikyuu.0dc87865e1b000984b40.jpg",
+    "static/media/blackCover.jpg": "/anime-info/static/media/blackCover.e235a5cd4c2e4d56d37b.jpg",
+    "static/media/Gintama.jpg": "/anime-info/static/media/Gintama.c49d7a526b71bc3b5d19.jpg",
     "static/media/Fmab.jpg": "/anime-info/static/media/Fmab.6fd06429acfa8a968d74.jpg",
     "static/media/onepunch.jpg": "/anime-info/static/media/onepunch.9c954737f5d4dbf8173f.jpg",
     "static/media/myHero.jpg": "/anime-info/static/media/myHero.cdd2e603027188353dc0.jpg",
     "static/media/ShingekinoKyojin.jpg": "/anime-info/static/media/ShingekinoKyojin.4ea1a49d5450f60ecec3.jpg",
     "static/media/naruto.jpg": "/anime-info/static/media/naruto.085a091b8c0bb3a5c3fe.jpg",
+    "static/media/hunterxhunter.jpg": "/anime-info/static/media/hunterxhunter.9ad52359ec0d6e96f7bf.jpg",
     "static/media/yigioh.jpg": "/anime-info/static/media/yigioh.21ff9067e9ae09b67528.jpg",
     "index.html": "/anime-info/index.html",
     "main.637706a0.css.map": "/anime-info/static/css/main.637706a0.css.map",
-    "main.c2401cec.js.map": "/anime-info/static/js/main.c2401cec.js.map"
+    "main.4c48555f.js.map": "/anime-info/static/js/main.4c48555f.js.map"
   },
   "entrypoints": [
     "static/css/main.637706a0.css",
-    "static/js/main.c2401cec.js"
+    "static/js/main.4c48555f.js"
   ]
 }
