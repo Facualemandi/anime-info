@@ -1,8 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import React from "react";
+import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
-import Loader from "../components/Loader/Loader";
 import { NavLink } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 const Main = styled.main`
   width: 100vw;
@@ -45,16 +45,19 @@ const Title = styled.p`
   color: white;
   padding: 5px;
 `;
-const DragonBallZ = () => {
-  const getDbz = async () => {
+const OnePunch = () => {
+  const getOnePunch = async () => {
     const response = await fetch(
-      "https://api.jikan.moe/v4/anime?q=Dragon%20Ball%20z&sfw"
+      "https://api.jikan.moe/v4/anime?q=one%20punch&sfw"
     );
-
     return response.json();
   };
 
-  const { data, status } = useQuery(["Dbz"], getDbz);
+  const { data, status } = useQuery(["onepunch"], getOnePunch);
+
+  const localDescription = (el) => {
+    localStorage.setItem("Description", JSON.stringify(el));
+  };
 
   if (status === "loading") {
     return <Loader />;
@@ -64,28 +67,22 @@ const DragonBallZ = () => {
     return <p>Error</p>;
   }
 
-  const localDescription = (el) => {
-    localStorage.setItem("Description", JSON.stringify(el));
-  };
-
   return (
-    <>
-      <Main>
-        <SectionOne>
-          {data.data.map((el) => (
-            <NavL
-              to={`/Description/${el.title}`}
-              key={el.mal_id}
-              onClick={() => localDescription(el)}
-            >
-              <Img alt={el.title} src={el.images.jpg.image_url} />
-              <Title>{el.title}</Title>
-            </NavL>
-          ))}
-        </SectionOne>
-      </Main>
-    </>
+    <Main>
+      <SectionOne>
+        {data.data.map((el) => (
+          <NavL
+            to={`/Description/${el.title}`}
+            key={el.mal_id}
+            onClick={() => localDescription(el)}
+          >
+            <Img alt={el.title} src={el.images.jpg.image_url} />
+            <Title>{el.title}</Title>
+          </NavL>
+        ))}
+      </SectionOne>
+    </Main>
   );
 };
 
-export default DragonBallZ;
+export default OnePunch;

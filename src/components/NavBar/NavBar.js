@@ -15,6 +15,7 @@ const Section = styled.section`
   margin: auto;
   border-radius: 5px;
   background-color: #32475b;
+  margin-top: 15px;
 
   @media (min-width: 780px) {
     width: 780px;

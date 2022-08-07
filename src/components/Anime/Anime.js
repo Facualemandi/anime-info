@@ -28,7 +28,7 @@ const Container = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: auto;
-  padding-top: 30px;
+  padding-top: 10px;
 
   @media (min-width: 780px) {
     grid-template-columns: repeat(3, 1fr);
@@ -74,17 +74,17 @@ const Anime = () => {
             </SectionAnime>
           </NavL>
 
-          <NavL to={"/Dbz"}>
+          <NavL to={"/naruto"}>
             <SectionAnime>
               <Img alt="Dragon Ball Z" src={Naruto} />
               <Name>Naruto</Name>
             </SectionAnime>
           </NavL>
 
-          <SectionAnime>
+          <NavL  to={'/onepunch'}>
             <Img alt="Dragon Ball Z" src={OnePunch} />
             <Name>One Punch Man</Name>
-          </SectionAnime>
+          </NavL>
 
           <SectionAnime>
             <Img alt="Dragon Ball Z" src={Yugioh} />
