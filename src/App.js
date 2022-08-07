@@ -9,6 +9,8 @@ import OnePunch from "./pages/OnePunch/OnePunch";
 import YuGiOh from "./pages/YuGiOh/YuGiOh";
 import JujutsuKaisen from "./pages/JujutsuKaisen/JujutsuKaisen";
 import HeroAcademi from "./pages/HeroAcademi/HeroAcademi";
+import Shingeki from "./pages/Shingeki/Shingeki";
+import Fullmetal from "./pages/Fullmetal/Fullmetal";
 
 function App() {
   const queryClient = new QueryClient();
@@ -24,7 +26,9 @@ function App() {
             <Route path="/onepunch" element={<OnePunch />} />
             <Route path="/yugioh" element={<YuGiOh />} />
             <Route path="/JujutsuKaisen" element={<JujutsuKaisen />} />
-            <Route path="/HeroAcademi" element={<HeroAcademi/>} />
+            <Route path="/HeroAcademi" element={<HeroAcademi />} />
+            <Route path="/shingeki" element={<Shingeki />} />
+            <Route path="/fullmetal" element={<Fullmetal />} />
             <Route path="/Description/:name" element={<Description />} />
           </Routes>
         </ScrollTop>

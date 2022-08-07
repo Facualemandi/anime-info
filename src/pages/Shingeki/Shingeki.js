@@ -46,19 +46,19 @@ const Title = styled.p`
   color: white;
   padding: 5px;
 `;
-const DragonBallZ = () => {
+const Shingeki = () => {
   const getDbz = async () => {
     const response = await fetch(
-      "https://api.jikan.moe/v4/anime?q=Dragon%20Ball%20z&sfw"
+      "https://api.jikan.moe/v4/anime?q=shingeki%20no%20kyojin&sfw"
     );
 
     return response.json();
   };
 
-  const { data, status } = useQuery(["Dbz"], getDbz);
+  const { data, status } = useQuery(["shingeki"], getDbz);
 
   if (status === "loading") {
-    return <Loader/>
+    return <Loader />;
   }
 
   if (status === "error") {
@@ -71,7 +71,6 @@ const DragonBallZ = () => {
 
   return (
     <>
-    
       <Main>
         <SectionOne>
           {data.data.map((el) => (
@@ -90,4 +89,4 @@ const DragonBallZ = () => {
   );
 };
 
-export default DragonBallZ;
+export default Shingeki;

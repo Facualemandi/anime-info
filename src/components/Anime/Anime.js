@@ -6,6 +6,8 @@ import OnePunch from "../../images/onepunch.jpg";
 import Yugioh from "../../images/yigioh.jpg";
 import JujutsuKaisen from "../../images/JujutsuKaisen.jpg";
 import MyHero from "../../images/myHero.jpg";
+import Shingeki from "../../images/ShingekinoKyojin.jpg";
+import Fma from "../../images/Fmab.jpg";
 import { NavLink } from "react-router-dom";
 
 const Main = styled.main`
@@ -62,6 +64,49 @@ const NavL = styled(NavLink)`
   text-decoration: none;
 `;
 
+const totalAnime = [
+  {
+    id: 1,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 2,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 3,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 4,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 5,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 6,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 7,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+  {
+    id: 8,
+    title: "Dragon Ball Z",
+    img: `${DragonBall}`,
+  },
+];
+
 const Anime = () => {
   return (
     <>
@@ -106,6 +151,19 @@ const Anime = () => {
             <SectionAnime>
               <Img alt="Dragon Ball Z" src={MyHero} />
               <Name>My Hero Academia</Name>
+            </SectionAnime>
+          </NavL>
+
+          <NavL to={"/shingeki"}>
+            <SectionAnime>
+              <Img alt="Shingeki No Kyojin" src={Shingeki} />
+              <Name>Shingeki No Kyojin</Name>
+            </SectionAnime>
+          </NavL>
+          <NavL to={"/fullmetal"}>
+            <SectionAnime>
+              <Img alt="Fullmetal Alchemist" src={Fma} />
+              <Name>Fullmetal Alchemist</Name>
             </SectionAnime>
           </NavL>
         </Container>
