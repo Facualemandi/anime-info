@@ -5,7 +5,7 @@ import { useTheContext } from "../../context/context";
 
 const Main = styled.main`
   width: 100vw;
-  height: max-content;
+  height: auto;
   background-color: #0a151f;
 `;
 
@@ -51,6 +51,9 @@ const SectionAnime = styled.section`
 
 const Name = styled.p`
   padding: 5px;
+  background-color: #172c3f;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 `;
 
 const NavL = styled(NavLink)`

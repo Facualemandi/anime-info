@@ -65,6 +65,36 @@ export function TheContext({ children }) {
       abb: "fullmetal",
       img: `${Fma}`,
     },
+    {
+      id: 9,
+      title: "Fullmetal Alchemist",
+      abb: "fullmetal",
+      img: `${Fma}`,
+    },
+    {
+      id: 10,
+      title: "Fullmetal Alchemist",
+      abb: "fullmetal",
+      img: `${Fma}`,
+    },
+    {
+      id: 11,
+      title: "Fullmetal Alchemist",
+      abb: "fullmetal",
+      img: `${Fma}`,
+    },
+    {
+      id: 12,
+      title: "Fullmetal Alchemist",
+      abb: "fullmetal",
+      img: `${Fma}`,
+    },
+    {
+      id: 13,
+      title: "Fullmetal Alchemist",
+      abb: "fullmetal",
+      img: `${Fma}`,
+    },
   ];
 
   const [search, setSearch] = useState("");

@@ -5,7 +5,10 @@ import "./Loader.css";
 const Section = styled.section`
   width: 100vw;
   display: flex;
+  height: 100vh;
   justify-content: center;
+  align-items: center;
+  background-color: #0a151f;
 `;
 const Loader = () => {
   return (

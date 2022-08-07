@@ -6,7 +6,7 @@ import Loader from "../../components/Loader/Loader";
 
 const Main = styled.main`
   width: 100vw;
-  background-color: #172c3f;
+  background-color: #0a151f;
 `;
 const SectionOne = styled.section`
   display: grid;
@@ -28,7 +28,7 @@ const SectionOne = styled.section`
 `;
 const Img = styled.img`
   width: 100%;
-  height: 300px;
+  height: 230px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 `;
@@ -36,14 +36,17 @@ const NavL = styled(NavLink)`
   text-decoration: none;
   color: black;
   margin: 10px;
-  border-radius: 10px;
-  background-color: #32475bbd;
+  border-radius: 15px;
+  background-color: #172c3f;
 `;
 const Title = styled.p`
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: white;
   padding: 5px;
+  background-color: #172c3f;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 `;
 const OnePunch = () => {
   const getOnePunch = async () => {

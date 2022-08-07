@@ -92,15 +92,18 @@ const DivOne = styled.div`
 const ScoreP = styled.p`
   font-family: "Roboto", sans-serif;
   font-size: 28px;
+  background-color: #172c3f;
 `;
 const Score = styled.p`
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: bold;
+  background-color: #172c3f;
 `;
 const ScoreBy = styled.p`
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  background-color: #172c3f;
 `;
 const SpanUser = styled.span`
   font-family: "Montserrat", sans-serif;
@@ -113,6 +116,7 @@ const SectionTwo = styled.section`
   margin: 10px;
   font-family: "Roboto", sans-serif;
   font-size: 22px;
+  
 
   @media (min-width: 780px) {
     display: flex;
@@ -124,6 +128,7 @@ const SpanDetails = styled.span`
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: lighter;
+  background-color: #172c3f;
 `;
 
 const ItemDetail = styled.p`
@@ -131,7 +136,7 @@ const ItemDetail = styled.p`
   margin-top: 12px;
   width: 100%;
   border-radius: 3px;
-  background-color: #32475b;
+  background-color: #172c3f;
   @media (min-width: 780px) {
     margin: 5px;
   }
@@ -164,7 +169,7 @@ const SectionSynopsys = styled.section`
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: #0a1c2c;
+  background-color: #172c3f;
   padding: 5px;
   margin-top: 15px;
   border-radius: 5px;
@@ -212,6 +217,7 @@ const SpanInfo = styled.span`
   font-weight: lighter;
   letter-spacing: 0.5px;
   margin-left: 5px;
+  background-color: #172c3f;
 `;
 
 const PInfo = styled.p`
@@ -219,6 +225,14 @@ const PInfo = styled.p`
   padding: 5px;
   background-color: #172c3f;
   border-radius: 3px;
+`;
+
+const ParrgraphSynopsis = styled.p`
+  background-color: #172c3f;
+`;
+
+const H3 = styled.h3`
+  background-color: #172c3f;
 `;
 
 const Description = () => {
@@ -247,7 +261,6 @@ const Description = () => {
     duration,
     rating,
   } = parseLocal;
-
 
   const img = parseLocal.images.webp.large_image_url;
   const genres = parseLocal.genres.map((el) => el.name);
@@ -354,8 +367,8 @@ const Description = () => {
         </SectionInfo>
 
         <SectionSynopsys>
-          <h3>Synopsis</h3>
-          <p>{synopsis}</p>
+          <H3>Synopsis</H3>
+          <ParrgraphSynopsis>{synopsis}</ParrgraphSynopsis>
         </SectionSynopsys>
       </Main>
     </>
